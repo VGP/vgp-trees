@@ -4,11 +4,11 @@
 	* `roadies_v1.1.rerooted.nwk` is the inferred tree in Newick, rerooted at Jawless fishes
 	* `roadies_v1.1.tre` is Nexus file with rooting and all sorts of other annotations, suitable for FigTree and perhaps other tree viewing software. 
 * Tree inferred using ROADIES from 85,375 gene trees. These include:
-	* 3949 from a shark-focused ROADIES run where sampling was 1/3 for sharks, fishes, and other vertebrates
-	* ???? from 3 iterations of ROADIES with random sampling no restriction, but only selecting gene trees that have at least one shark
-	* ???? from a bird-focused run where ????
-* Invertebrates were included in the run but were misplaced. We removed them from the gene trees and reran ASTRAL-Pro to get the final tree. 
-	* We manually rooted the tree on the branch separating jawless fishes from the rest 
+	- 29,239 gene trees are from the ROADIES run with random sampling (no restriction) from the entire 581-species dataset. Each of the gene trees has a minimum of 58 unique species. 
+	- 54,288 gene trees are from the ROADIES run with random sampling from 139 species (137 birds + 2 crocodiles as outgroups) out of the large 581-species dataset. Each of the gene trees has a minimum of 4 unique species.
+	- 1,848 gene trees are from shark-focused ROADIES run with the entire 581-species dataset, where gene sampling was 1/3 for sharks, fishes, and the rest of the other species. Each of the gene trees has a minimum of 58 unique species.
+* Invertebrates were included in the run but were misplaced. We removed them from the final ASTRAL-Pro species tree. 
+* We manually rooted the tree on the branch separating jawless fishes from the rest 
 	```
 	nw_reroot roadies_v1.1.nwk GCA_048934315.1 GCA_964187855.1 GCA_964198595.1 > roadies_v1.1.rerooted.nwk
 	```
