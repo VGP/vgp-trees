@@ -1,5 +1,6 @@
 ### First attempt: `roadies_v1.1.tre` or `roadies_v1.1.nwk`
 * Files:
+	* `roadies_v1.1.4.nwk` is the inferred tree in Newick with improved branch lengths due to correct rooting before branch length estimation
 	* `roadies_v1.1.nwk` is the inferred tree in Newick with no edits
 	* `roadies_v1.1.rerooted.nwk` is the inferred tree in Newick, rerooted at Jawless fishes
 	* `roadies_v1.1.tre` is Nexus file with rooting and all sorts of other annotations, suitable for FigTree and perhaps other tree viewing software. 
@@ -14,5 +15,6 @@
 	```
 * Support values on the species tree are between 0 and 1. Above 0.95 is traditionally considered high. Below 0.8 is considered low. 
 * Branch lengths are in units of the expected number of substitutions per site. 
-	* If the branch lengths matter to you, note that the branch of the root branch and perhaps one or two adjacent ones cannot be taken at face value. The root branch is arbitrarily rooted at the middle point. And CASTLES-Pro needs to be rerun to get the current length on that branch anyway. We will fix this and release a new version. 
+	* If the branch lengths matter to you, note that the branch of the root branch and perhaps one or two adjacent ones cannot be taken at face value in `roadies_v1.1.nwk`. The root branch is arbitrarily rooted at the middle point. And CASTLES-Pro needs to be rerun to get the current length on that branch anyway. We will fix this and release a new version. 
+	* In `roadies_v1.1.4.nwk`, branch lengths and support values are reestiamted after forcing invertebrates to be in the right place, and then removing invertebrates
 * See [annotations.tsv](annotations.tsv) for an annotation file. 
