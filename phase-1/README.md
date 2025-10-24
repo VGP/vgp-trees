@@ -1,4 +1,10 @@
-### First attempt: `roadies_v1.1.tre` or `roadies_v1.1.nwk`
+### Final attempt: <./roadies_v1.1.16b.nwk>
+
+This is the final tree. It's a results of a contrained search, with a constrained tree, given in <./start.tre>. The start tree forced some resolutions that the unconstrained tree was getting wrong. 
+
+MORE DETAILS TO FOLLOW. 
+
+### Previous attempt: `roadies_v1.1.nwk` and `roadies_v1.1.4.nwk`
 * Files:
 	* `roadies_v1.1.4.nwk` is the inferred tree in Newick with improved branch lengths due to correct rooting before branch length estimation
 	* `roadies_v1.1.nwk` is the inferred tree in Newick with no edits
