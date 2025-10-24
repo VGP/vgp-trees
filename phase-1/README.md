@@ -4,6 +4,8 @@ This is the final tree. It's a results of a contrained search, with a constraine
 
 MORE DETAILS TO FOLLOW. 
 
+* 123,141 gene trees in total. 
+
 ### Previous attempt: `roadies_v1.1.nwk` and `roadies_v1.1.4.nwk`
 * Files:
 	* `roadies_v1.1.4.nwk` is the inferred tree in Newick with improved branch lengths due to correct rooting before branch length estimation
