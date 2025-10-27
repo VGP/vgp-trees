@@ -42,6 +42,14 @@
 	* Lack of a `(Tetraodontidae, Antennariidae, Scatophagidae)` clade 
 * In this tree, invertebrates were completely misplaced by ROADIES, so they were removed and branch lengths were recalculated. 
 * For most analyses, the constrained tree will be preferred. This trees is provided for completeness. 
+* The unconstrained tree differs from the constrained tree in 8 branches:
+	* Position of coelacanth versus Lungfish (constrained)
+	* Position of Sturgeons/Paddlefishes (constrained)
+	* 2 edges: Position of Plectognaths (constrained)
+	* Position of Iguanas (constrained)
+	* Position of Mousebirds within birds
+	* Position of Cuckoos within birds
+	* Common ancestor of Cow sharks/Seven-gill sharks and Sawsharks  
 
 ## Previous attempt 
 
