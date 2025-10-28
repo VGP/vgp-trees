@@ -26,13 +26,19 @@
 	~~~bash
 	cat roadies_v1.1.14.nwk |nw_reroot - GCF_902459465.1 GCA_040954625.2 > roadies_v1.1.15.nwk
 	~~~
-* Branch lengths were recomputed on this rerooted tree using
+* Branch lengths and support values were recomputed on this rerooted tree using
  
 	~~~bash
 	astral-pro3 -t 64 -C -c roadies_v1.1.15.nwk  -i gene_trees_v1.1.9.nwk -o roadies_v1.1.16a.nwk
 	~~~
 * astral-pro3 cannot infer the position and length of the root branch. We manually copied the branch lengths of the `GCF_902459465.1` and `GCA_040954625.2` and the common ancestor from `roadies_v1.1.14.nwk` onto `roadies_v1.1.16a.nwk` to obtain the final tree `roadies_v1.1.16b.nwk`. 
 
+* Support values on the species tree are between 0 and 1. Above 0.95 is traditionally considered high. Below 0.8 is considered low. 
+* Branch lengths are in units of the expected number of substitutions per site. 
+	* Note that the root branch length included the manual adjustment noted above and is arbitrarily rooted at its middle point.  In general, branch lengths among invertebrates and the branches connecting vertebrates and non-vertebrates should be taken with a grain of salt, given the low gene sampling among invertebrates.  
+
+
+* See [annotations.tsv](annotations.tsv) for an annotation file. 
 
 ### Unconstrained tree (`roadies_v1.1.10c.nwk`) 
 
@@ -69,8 +75,3 @@ We describe earlier runs, `roadies_v1.1.nwk` and `roadies_v1.1.4.nwk`
 	```
 	nw_reroot roadies_v1.1.nwk GCA_048934315.1 GCA_964187855.1 GCA_964198595.1 > roadies_v1.1.rerooted.nwk
 	```
-* Support values on the species tree are between 0 and 1. Above 0.95 is traditionally considered high. Below 0.8 is considered low. 
-* Branch lengths are in units of the expected number of substitutions per site. 
-	* If the branch lengths matter to you, note that the branch of the root branch and perhaps one or two adjacent ones cannot be taken at face value in `roadies_v1.1.nwk`. The root branch is arbitrarily rooted at the middle point. And CASTLES-Pro needs to be rerun to get the current length on that branch anyway. We will fix this and release a new version. 
-	* In `roadies_v1.1.4.nwk`, branch lengths and support values are reestiamted after forcing invertebrates to be in the right place, and then removing invertebrates
-* See [annotations.tsv](annotations.tsv) for an annotation file. 
