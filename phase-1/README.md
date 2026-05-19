@@ -11,10 +11,10 @@
 	3. Shark-focused run (partitioned dataset): To confidently resolve the relative placement of sharks compared to fishes and other vertebrates, we partitioned the dataset into three clades (sharks, fishes, and all remaining species) and enabled ROADIES to sample 8,000 loci evenly across the three groups, resulting in 1,848 gene trees post-filtration.
 	4. Fish-focused subset (181 species: 178 fishes + 3 Gymnophiona as outgroups): Given the challenges in resolving the deep divergence within fishes, we sampled 160,000 loci from this subset, which yielded 37,766 gene trees.
 
-  **Total:** $29,239+54,288+1,848+37,766=123,141$ gene trees in total. 
+  **Total:** $29,239+54,288+1,848+37,766=123,141$ gene trees in total. These gene trees are provided in files [gene_trees_v1.1.16b.nwk.file1.gz](gene_trees_v1.1.16b.nwk.file1.gz) and [gene_trees_v1.1.16b.nwk.file2.gz](gene_trees_v1.1.16b.nwk.file2.gz), divided into two to accomodate Git.
 
 *  ROADIES filtering parameters:
-	*  We set the MIN_ALIGN to 10% of the number of input genomes for all partitions except for the bird-focused subset, where we set this parameter to 4. All other parameters were set to their default settings. 
+	*  We set the `MIN_ALIGN` to 10% of the number of input genomes for all partitions except for the bird-focused subset, where we set this parameter to 4. All other parameters were set to their default settings. 
 *  The gene trees were inferred with no constraints. To obtain the final species tree, we used [./start.tre](start.tre) (depicted in [./start.pdf](start.pdf)) as a fixed starting tree constraint `--constraint ` as input to ASTRAL-Pro3:
 
 	~~~bash
