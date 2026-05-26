@@ -15,8 +15,8 @@ AnuraAnc0	58	1	-	unlimited	0.5	multiplier	-	-	-	default	default	default	Anura br
 RayFinnedFishesAnc03	64	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Teleosts+Otocephala
 RayFinnedFishesAnc04	65	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Teleosts
 RayFinnedFishesAnc64	66	1	-	3000000	0.7	multiplier	-	-	-	default	default	stratified_random_within_node	Otocephala
-AnuraAnc1	67	1	-	default	0.6	multiplier	-	-	-	default	default	stratified_random_within_node	
-GymnophionaAnc0	68	1	-	default	2	absolute	-	-	-	default	default	stratified_random_within_node		
+AnuraAnc1	67	1	-	default	0.6	multiplier	-	-	-	default	default	stratified_random_within_node	-
+GymnophionaAnc0	68	1	-	default	2	absolute	-	-	-	default	default	stratified_random_within_node	-
 VertebratesAnc5	69	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Amniota
 RayFinnedFishesAnc05	79	1	-	default	0.7	multiplier	-	-	-	default	default	stratified_random_within_node	Euteleostei
 BirdsAnc0	80	1	-	150000	0.9	multiplier	-	-	-	default	1000	stratified_random_within_node	Aves
