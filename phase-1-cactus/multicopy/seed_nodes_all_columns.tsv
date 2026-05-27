@@ -35,7 +35,7 @@ CartilaginousFishesAnc2	55	0	-	default	6	absolute	-	-	-	default	default	default	
 CartilaginousFishesAnc7	56	0	-	default	5	absolute	-	-	-	default	default	default	Rays
 GCF_040954835.1	66	0	-	6000000	1	absolute	-	-	-	default	default	default	spotted gar (ancestral)
 GCF_027358695.1	81	0	-	5000000	1	absolute	-	-	-	default	default	default	spadefoot toad with small genome
-AnuraAnc4	82	0	-	unlimited	0.6	multiplier	-	-	-	default	default	-
+AnuraAnc4	82	0	-	unlimited	0.6	multiplier	-	-	-	default	default	default	-
 BirdsAnc2	170	0	-	default	0.7	multiplier	-	-	-	default	default	default	Neoaves
 CoreLandbirdsAnc10	200	0	-	default	0.8	multiplier	-	-	-	default	default	default	birdsOfPrey
 CypriniformesAnc00	230	0	-	default	0.7	multiplier	-	-	-	default	default	default	Cypriniformes
