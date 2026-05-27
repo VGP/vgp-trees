@@ -1,10 +1,10 @@
-ASTRAL-Pro aanlyses with six set of locus sets, with progresssively more loci sampled. 
+ASTRAL-Pro analyses with six set of loci, with progresssively more loci sampled HAL files: 
 
 |                         | **L1**  | **L2**  | **L3**  | **L4**   | **L5**  | **L6**  |
 | ----------------------- | ------- | ------- | ------- | -------- | ------- | ------- |
 | **\# genes**            | 1,645   | 18,838  | 37,257  | 59,689   | 101,345 | 162,243 |
-| **RF to previous tree** | \-      | 7 (1.25%) | 5 (0.9%) |  6 (1.2%) | 2 (0.4%) | 0 (0%)   |
-| **RF to ROAIDES**       | 22 (3.9%) | 21 (3.7%) | 18 (3.2%) | 13 (2.3%)  | 13 (2.3%) | 13 (2.3%) |
+| **Difference to previous tree (edges)** | \-      | 7 (1.25%) | 5 (0.9%) |  6 (1.2%) | 2 (0.4%) | 0 (0%)   |
+| **Difference to ROAIDES (edges)**       | 22 (3.9%) | 21 (3.7%) | 18 (3.2%) | 13 (2.3%)  | 13 (2.3%) | 13 (2.3%) |
 
 The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_columns.tsv) as drawn in [seed_nodes.pdf](seed_nodes.pdf), and config file [config.yaml](config.yaml). Annotations of CDS were masked based on these [annotation files](newannotationshared.txt).
 
