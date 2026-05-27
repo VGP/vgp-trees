@@ -6,7 +6,7 @@ ASTRAL-Pro aanlyses with six set of locus sets, with progresssively more loci sa
 | **RF to previous tree** | \-      | 7 (1.25%) | 5 (0.9%) |  6 (1.2%) | 2 (0.4%) | 0 (0%)   |
 | **RF to ROAIDES**       | 22 (3.9%) | 21 (3.7%) | 18 (3.2%) | 13 (2.3%)  | 13 (2.3%) | 13 (2.3%) |
 
-The loci are based on the config file [seed_nodes_all_columns.tsv](seed_nodes_all_columns.tsv) and drawn in [seed_nodes.pdf](seed_nodes.pdf).
+The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_columns.tsv) as drawn in [seed_nodes.pdf](seed_nodes.pdf), and config file [config.yaml](config.yaml). Annotations of CDS were masked based on these [annotation files](newannotationshared.txt).
 
 * **L1**: P1-P4: `VertebratesAnc0`,`JawlessFishesAnc0`,`PetromyzontidaeAnc0`,`VertebratesAnc1` ($+$ handful of other loci that included at least one jawless fish)
 * **L2**: P1-P8: L1 $+$ `CartilaginousFishesAnc0`,

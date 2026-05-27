@@ -1,0 +1,52 @@
+input:
+  hal: /drive1/smirarab/vgp/577way/vgp-577way-v1.hal
+  tree: ./vgp-577way-v1.nwk
+  mrca_root: VertebratesAnc0
+  ignore_taxa: ./ignore_taxa.txt
+  seed_nodes_tsv: ./seed_nodes_all_columns.tsv
+  annotations_tsv: ./newannotationshared.txt
+
+output:
+  outdir: ./
+
+seeding:
+  mode: ordered
+  seed_length_min: 1200
+  seed_length_max: 4000
+  seed_step: 50
+  quota_per_node: 1000000  # optional global per-seed-node cap; per-node manifest quota overrides this
+  random_seed: 13
+  mode: stratified_random_within_node
+
+locus:
+  min_length: 1200
+  max_length: 2500
+  min_represented_genomes_global: 8
+  min_represented_genomes_default: 0.7
+  min_represented_genomes_mode: multiplier
+  min_copy_occupancy_bases: 500
+  max_gap_site_frac: 0.999
+  min_nongap_genomes: 20
+  padding_bp: 200
+  selection_mode: greedy_best_sites
+
+annotation:
+  exclude_features: [CDS]
+  force_cache_reuse: true
+
+prefilter:
+  enable: true
+
+compute:
+  processes: 8
+  threads_per_process: 1
+
+logging:
+  verbose: true
+  write_run_log: true
+  write_attrition_tsv: true
+  write_timing_tsv: true
+
+extraction:
+  include_ancestors: false  # currently interpreted at FASTA-writing time, not as a hal2maf flag
+  max_loci: 500000

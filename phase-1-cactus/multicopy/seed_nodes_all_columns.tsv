@@ -1,17 +1,17 @@
 node	priority	enabled	weight	quota	min_represented_genomes	min_represented_genomes_mode	seed_length_min	seed_length_max	seed_step	min_nongap_genomes	min_copy_occupancy_bases	seeding_mode	notes
 VertebratesAnc0	22	1	-	unlimited	15	absolute	-	-	-	default	400	default	Very little coverage needed below to accomodate jawless
-JawlessFishesAnc0	23	1	-	unlimited	2	absolute	-	-	-	default	400	default	Start to allow good coverage
+JawlessFishesAnc0	23	1	-	unlimited	2	absolute	-	-	-	default	400	default	Low occupancy to allow good coverage
 PetromyzontidaeAnc0	24	1	-	unlimited	2	absolute	-	-	-	default	400	default	Petromyzontidae focus
 VertebratesAnc1	25	1	-	unlimited	0.5	multiplier	-	-	-	default	400	default	JawedVertebrates
 CartilaginousFishesAnc0	28	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	shark+rays
 VertebratesAnc2	29	1	-	unlimited	0.5	multiplier	-	-	-	default	default	default	BonyFish
 RayFinnedFishesAnc00	33	1	-	unlimited	1/20	absolute/absolute	-	-	-	default	default	default	Base ray-finned fishes
 RayFinnedFishesAnc00	34	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Base ray-finned fishes
-VertebratesAnc3	38	1	-	unlimited	1/40	absolute/absolute	-	-	-	default	default	default	tetrapod+coelacanth
+VertebratesAnc3	38	1	-	unlimited	1/40	absolute/absolute	-	-	-	default	default	default	tetrapod+coelacant, requring coelacant
 VertebratesAnc4	40	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	tetrapod
 AmphibiansAnc0	43	1	-	unlimited	0.6	multiplier	-	-	-	default	default	default	Amphibians
 RayFinnedFishesAnc02	53	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Teleosts+gar+reed
-AnuraAnc0	58	1	-	unlimited	0.5	multiplier	-	-	-	default	default	default	Anura broad
+AnuraAnc0	58	1	-	unlimited	0.5	multiplier	-	-	-	default	default	default	Anura
 RayFinnedFishesAnc03	64	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Teleosts+Otocephala
 RayFinnedFishesAnc04	65	1	-	unlimited	0.7	multiplier	-	-	-	default	default	default	Teleosts
 RayFinnedFishesAnc64	66	1	-	3000000	0.7	multiplier	-	-	-	default	default	stratified_random_within_node	Otocephala
