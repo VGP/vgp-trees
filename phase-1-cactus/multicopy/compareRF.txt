@@ -1,0 +1,7 @@
+./astralpro.l2.tre	561 21 .0374
+./astralpro.l6.tre	561 13 .0232
+./astralpro.l4.tre	561 13 .0232
+./astralpro.l1.tre	561 25 .0446
+./astralpro.l5.tre	561 13 .0232
+./old/astralpro.l1.tre	561 22 .0392
+./astralpro.l3.tre	561 18 .0321

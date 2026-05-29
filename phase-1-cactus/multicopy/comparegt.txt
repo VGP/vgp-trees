@@ -1,0 +1,7 @@
+./astralpro.l1.tre 1610 564
+./astralpro.l6.tre 162243 564
+./astralpro.l2.tre 18838 564
+./astralpro.l5.tre 101345 564
+./astralpro.l3.tre 37257 564
+./astralpro.l4.tre 59689 564
+./old/astralpro.l1.tre 1645 564
