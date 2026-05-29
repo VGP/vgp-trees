@@ -2,9 +2,9 @@ ASTRAL-Pro analyses with six set of loci, with progresssively more loci sampled 
 
 |                         | **L1**  | **L2**  | **L3**  | **L4**   | **L5**  | **L6**  |
 | ----------------------- | ------- | ------- | ------- | -------- | ------- | ------- |
-| **\# genes**            | 1,645   | 18,838  | 37,257  | 59,689   | 101,345 | 162,243 |
-| **Difference to previous tree (edges)** | \-      | 7 (1.25%) | 5 (0.9%) |  6 (1.2%) | 2 (0.4%) | 0 (0%)   |
-| **Difference to ROAIDES (edges)**       | 22 (3.9%) | 21 (3.7%) | 18 (3.2%) | 13 (2.3%)  | 13 (2.3%) | 13 (2.3%) |
+| **\# genes**            | 1610   | 18,838  | 37,257  | 59,689   | 101,345 | 162,243 |
+| **Difference to previous tree (edges)** | \-      | 11 (2.0%) | 5 (0.9%) |  6 (1.2%) | 2 (0.4%) | 0 (0%)   |
+| **Difference to ROAIDES (edges)**       | 25 (4.5%) | 21 (3.7%) | 18 (3.2%) | 13 (2.3%)  | 13 (2.3%) | 13 (2.3%) |
 
 The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_columns.tsv) as drawn in [seed_nodes.pdf](seed_nodes.pdf), and config file [config.yaml](config.yaml). Annotations of CDS were masked based on these [annotation files](newannotationshared.txt).
 
@@ -15,9 +15,12 @@ The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_
 * **L5**: P1-P23: L4 $+$ subsample of ~10-15k of the largest loci sampled from each of `BirdsAnc0` `SquamataAnc0`,  `RayFinnedFishesAnc66`
 * **L6**: P1-P23: L5 $+$ remaining loci sampled `BirdsAnc0` `SquamataAnc0`,  `RayFinnedFishesAnc66`
 
-* `compare.R`: 
+* Compare Trees: 
     * Use [compareTrees](https://github.com/smirarab/global/blob/master/src/shell/compareTrees) to compare trees to ROADIES, ignoring invertebrates (`ignore.txt`) and any oddities of names. 
     ~~~bash
     for x in `find . -name "*astralpro*tre"|grep -v log`; do compareTrees <(nw_prune ./vgp-577way-v1.nwk.rformat $(sed -e "s:\..*::" ignore.txt|tr '\n' ' ' ))  <(nw_rename -l $x mapnames) -simplify 2>/dev/null |cut -f3,2|awk '{if ($2=="") print($1)}'|sed -e "s:^:$x\t:" ; done  |tee compare.txt
    join <(find . -name "*astralpro*"|grep log|xargs grep Genetrees|sed -e "s/.log.*es:/.tre/" |tr " " "\t")  <(find . -name "*astralpro*"|grep log|xargs grep Species|sed -e "s/.log.*es:/.tre/" |tr " " "\t") |tee comparegt.txt
+   for x in `find . -name "*astralpro*tre*"|grep -v log`; do compareTrees.missingBranch <(nw_prune ./vgp-577way-v1.nwk.rformat $(sed -e "s:\..*::" ignore.txt|tr '\n' ' ' ))  <(nw_rename -l $x mapnames) -simplify |sed -e "s:^:$x\t:" ; done  |tee compareRF.txt
    ~~~
+
+  
