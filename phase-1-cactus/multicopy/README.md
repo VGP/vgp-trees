@@ -8,25 +8,16 @@ ASTRAL-Pro analyses with six set of loci, with progresssively more loci sampled 
 
 The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_columns.tsv) as drawn in [seed_nodes.pdf](seed_nodes.pdf), and config file [config.yaml](config.yaml). Annotations of CDS were masked based on these [annotation files](newannotationshared.txt).
 
-* **L1**: P1-P4: `VertebratesAnc0`,`JawlessFishesAnc0`,`PetromyzontidaeAnc0`,`VertebratesAnc1` ($+$ handful of other loci that included at least one jawless fish)
-* **L2**: P1-P8: L1 $+$ `CartilaginousFishesAnc0`,
-`VertebratesAnc2`,
-`RayFinnedFishesAnc00` (2 rows)
-* **L3**: P1-P15: L2 $+$ `VertebratesAnc3`,
-`VertebratesAnc4`,
-`AmphibiansAnc0`, 
-`RayFinnedFishesAnc02`,
-`AnuraAnc0`,
-`RayFinnedFishesAnc03`,
-`RayFinnedFishesAnc04`
-* **L4**: P1-P20: L3 $+$ `RayFinnedFishesAnc64`,
-`AnuraAnc1`, 
-`GymnophionaAnc0`, 
-`VertebratesAnc5`, 
-`RayFinnedFishesAnc05` 
-* **L5**: P1-P23: L4 $+$ subsample of ~10-15k of the largest loci sampled from each of `BirdsAnc0`
-`SquamataAnc0`, 
-`RayFinnedFishesAnc66`
-* **L6**: P1-P23: L5 $+$ remaining loci sampled `BirdsAnc0`
-`SquamataAnc0`, 
-`RayFinnedFishesAnc66`
+* **L1**: P1-P4: `VertebratesAnc0`,`JawlessFishesAnc0`,`PetromyzontidaeAnc0`,`VertebratesAnc1` 
+* **L2**: P1-P8: L1 $+$ `CartilaginousFishesAnc0`, `VertebratesAnc2`, `RayFinnedFishesAnc00` (2 rows)
+* **L3**: P1-P15: L2 $+$ `VertebratesAnc3`, `VertebratesAnc4`, `AmphibiansAnc0`,  `RayFinnedFishesAnc02`, `AnuraAnc0`, `RayFinnedFishesAnc03`, `RayFinnedFishesAnc04`
+* **L4**: P1-P20: L3 $+$ `RayFinnedFishesAnc64`, `AnuraAnc1`,  `GymnophionaAnc0`,  `VertebratesAnc5`,  `RayFinnedFishesAnc05` 
+* **L5**: P1-P23: L4 $+$ subsample of ~10-15k of the largest loci sampled from each of `BirdsAnc0` `SquamataAnc0`,  `RayFinnedFishesAnc66`
+* **L6**: P1-P23: L5 $+$ remaining loci sampled `BirdsAnc0` `SquamataAnc0`,  `RayFinnedFishesAnc66`
+
+* `compare.R`: 
+    * Use [compareTrees](https://github.com/smirarab/global/blob/master/src/shell/compareTrees) to compare trees to ROADIES, ignoring invertebrates (`ignore.txt`) and any oddities of names. 
+    ~~~bash
+    for x in `find . -name "*astralpro*tre"|grep -v log`; do compareTrees <(nw_prune ./vgp-577way-v1.nwk.rformat $(sed -e "s:\..*::" ignore.txt|tr '\n' ' ' ))  <(nw_rename -l $x mapnames) -simplify 2>/dev/null |cut -f3,2|awk '{if ($2=="") print($1)}'|sed -e "s:^:$x\t:" ; done  |tee compare.txt
+   join <(find . -name "*astralpro*"|grep log|xargs grep Genetrees|sed -e "s/.log.*es:/.tre/" |tr " " "\t")  <(find . -name "*astralpro*"|grep log|xargs grep Species|sed -e "s/.log.*es:/.tre/" |tr " " "\t") |tee comparegt.txt
+   ~~~
