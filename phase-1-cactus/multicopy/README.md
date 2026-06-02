@@ -23,4 +23,5 @@ The loci are based on the seed file [seed_nodes_all_columns.tsv](seed_nodes_all_
    for x in `find . -name "*astralpro*tre*"|grep -v log`; do compareTrees.missingBranch <(nw_prune ./vgp-577way-v1.nwk.rformat $(sed -e "s:\..*::" ignore.txt|tr '\n' ' ' ))  <(nw_rename -l $x mapnames) -simplify |sed -e "s:^:$x\t:" ; done  |tee compareRF.txt
    ~~~
 
+   For name of clades, see `./vgp-577way-v1.nwk.rformat`
   
