@@ -1,4 +1,5 @@
 Obtaining occupancy:
+
 ~~~bash
 for l in l1 l2 l3 l4 l5 l6; do 
 x=astralinput.$l.trees 
@@ -6,4 +7,6 @@ cat $x |xargs -I{} sh -c "echo '{}'|nw_labels -I -|sort|uniq -c"|awk '{print ($1
 done
 ~~~
 
-Drawing is done using `occupancy.r`
+You need newick utilities, available through bioconda (`newick_utils`)
+
+Drawing is done using <./occupancy.r>
